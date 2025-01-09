@@ -55,7 +55,7 @@ layers:
   - End
   - ''
   - Caps Lock
-  - {t: LSHIFT, h: toggle}
+  - LSHIFT
   - F5
   - F6
   - F7
