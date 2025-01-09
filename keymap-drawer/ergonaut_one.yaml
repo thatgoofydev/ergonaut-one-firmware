@@ -1,6 +1,6 @@
 layers:
-  default:
-  - {t: ']', h: Gui}
+  MAIN:
+  - {t: '`', h: Gui}
   - Q
   - W
   - E
@@ -11,8 +11,8 @@ layers:
   - I
   - O
   - P
-  - '['
-  - {t: '`', h: Ctrl}
+  - {t: '-', s: CALC}
+  - {t: '=', h: LSHIFT}
   - A
   - S
   - D
@@ -23,8 +23,8 @@ layers:
   - K
   - L
   - ;
-  - {t: '''', h: Ctrl}
-  - {t: '-', h: Alt}
+  - {t: '''', h: RSHIFT}
+  - Ctrl
   - Z
   - X
   - C
@@ -36,100 +36,101 @@ layers:
   - .
   - /
   - {t: \, h: Alt}
-  - {t: ↹, h: raise}
-  - {t: ␣, h: Shift}
-  - {t: ⏎, h: lower}
-  - {t: Esc, h: lower}
-  - {t: ⌫, h: Shift}
-  - {t: ⌦, h: raise}
-  lower:
-  - {t: F1, h: Gui}
+  - {t: ↹, h: NAV}
+  - ␣
+  - {t: ⏎, h: SYM}
+  - {t: Esc, h: SYM}
+  - BACKSPACE
+  - {t: ⌦, h: NAV}
+  NAV:
+  - LEFT GUI
+  - F1
   - F2
   - F3
   - F4
+  - Print Scrn
+  - Vol Up
+  - Home
+  - ↑
+  - End
+  - ''
+  - Caps Lock
+  - {t: LSHIFT, h: toggle}
   - F5
   - F6
   - F7
   - F8
+  - ''
+  - MUTE
+  - ←
+  - ↓
+  - →
+  - ''
+  - Shift
+  - Ctrl
   - F9
   - F10
   - F11
   - F12
-  - {t: +, h: Ctrl}
+  - Insert
+  - Vol Down
+  - Page Up
+  - APP
+  - Page Down
+  - ''
+  - Alt
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - BACKSPACE
+  - {t: ⌦, h: NAV}
+  SYM:
+  - LEFT GUI
   - '!'
   - '@'
-  - '#'
-  - $
-  - '%'
-  - ^
-  - '&'
-  - '*'
-  - (
-  - )
-  - {t: '-', h: Ctrl}
-  - {t: '=', h: Alt}
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
-  - '6'
+  - '['
+  - ']'
+  - ''
+  - /
   - '7'
   - '8'
   - '9'
-  - '0'
-  - Alt
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  raise:
-  - {t: KP NUM, h: Gui}
-  - KP SLASH
-  - KP 7
-  - KP 8
-  - KP 9
   - KP MINUS
-  - Vol Up
-  - Home
-  - Print Scrn
-  - Page Up
-  - SLCK
-  - CLCK
-  - {t: '=', h: Ctrl}
-  - KP MULTIPLY
-  - KP 4
-  - KP 5
-  - KP 6
+  - '-'
+  - {t: '=', h: LSHIFT}
+  - '#'
+  - $
+  - (
+  - )
+  - ''
+  - '*'
+  - '4'
+  - '5'
+  - '6'
   - KP PLUS
-  - MUTE
-  - ←
-  - ↑
-  - →
-  - Insert
-  - {t: APP, h: Ctrl}
+  - RSHIFT
+  - Ctrl
+  - '%'
+  - ^
+  - '{'
+  - '}'
+  - ''
+  - '&'
+  - '1'
+  - '2'
+  - '3'
+  - ''
   - Alt
-  - KP 0
-  - KP 1
-  - KP 2
-  - KP 3
-  - KP DOT
-  - Vol Down
-  - End
-  - ↓
-  - Page Down
-  - Pause Break
-  - Alt
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  adjust:
+  - '0'
+  - .
+  ADJ:
   - Boot
+  - '&studio_unlock'
   - ''
   - ''
   - ''
@@ -138,8 +139,7 @@ layers:
   - ''
   - ''
   - ''
-  - ''
-  - ''
+  - '&studio_unlock'
   - Boot
   - BT CLR
   - BT 1
@@ -165,9 +165,14 @@ layers:
   - ''
   - ''
   - Reset
-  - {type: held}
-  - ''
-  - {type: held}
-  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {type: held}
+  - {type: held}
+combos:
+- p: [41, 40, 39]
+  k: {t: ADJ, h: sticky}
+- p: [38, 37, 36]
+  k: {t: ADJ, h: sticky}
